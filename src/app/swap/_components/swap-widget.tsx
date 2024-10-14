@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import ProgressBar from '../_components/progress-bar'
 import TokenSelect from '../_components/token-select'
@@ -28,6 +28,14 @@ const SwapWidget = () => {
     setBuyToken(sellToken)
     setSellToken(buyToken)
   }
+
+  useEffect(()=>{
+    if(isConnected ){
+      setCurrentStep(1);
+    }else{
+      setCurrentStep(0);
+    }
+  },[isConnected])
 
   return (
     <div className="flex w-full max-w-[550px] flex-col gap-4 rounded-3xl bg-[#121212] p-8 shadow-[0px_0px_6.2px_0px_#000000]">
