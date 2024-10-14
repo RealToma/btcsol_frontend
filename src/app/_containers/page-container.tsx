@@ -10,11 +10,11 @@ const HomePageContainer = () => {
       <section className="relative w-full pt-16">
         <img
           src="/assets/img/bg-gradient/Ellipse 49.svg"
-          className="absolute left-0 top-0 -translate-y-[100px]"
+          className="absolute left-0 top-0 -translate-y-[100px] -z-10"
         />
         <img
           src="/assets/img/bg-gradient/Ellipse 43.svg"
-          className="absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0 -z-10"
         />
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-20">
           <div className="flex w-full items-center justify-between">
@@ -138,7 +138,7 @@ const HomePageContainer = () => {
         />
         <img
           src="/assets/img/bg-gradient/Ellipse 47.svg"
-          className="absolute bottom-0 right-0 translate-y-1/2"
+          className="absolute bottom-0 right-0 translate-y-1/2 -z-10"
         />
 
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-10">

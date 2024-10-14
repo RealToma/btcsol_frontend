@@ -41,7 +41,7 @@ export function Header() {
     <header className="bg-bg-white-0 mx-auto w-full max-w-5xl">
       <div className="flex items-center justify-between gap-2 py-5 md:gap-6">
         <a className="flex items-center gap-2 font-semibold" href="/">
-          <img src="/assets/img/header/logo.svg" />
+          <img src="/assets/img/header/logo.svg" alt="logo"/>
           BTC on Solana
         </a>
 
