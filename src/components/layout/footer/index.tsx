@@ -2,11 +2,11 @@
 
 export function Footer() {
   return (
-    <footer className="mx-auto flex w-full max-w-[900px] items-center justify-between border-t border-[#FFFFFF26] py-9">
-      <p className="flex gap-3 font-semibold">
+    <footer className="mx-auto flex w-full max-w-5xl items-center justify-between border-t border-[#FFFFFF26] py-9">
+      <a href="/" className="flex gap-3 font-semibold">
         <img src="/assets/img/footer/logo.svg" />
         BTC on Solana
-      </p>
+      </a>
       <div className="flex gap-[10px]">
         <img
           src="/assets/img/footer/telegram.svg"
