@@ -9,11 +9,11 @@ const HomePageContainer = () => {
     <main className="flex w-full flex-col gap-40">
       <section className="relative w-full pt-16">
         <img
-          src="/assets/img/bg-gradient/Ellipse 49.svg"
+          src="/assets/img/bg-gradient/ellipse_49.svg"
           className="absolute left-0 top-0 -translate-y-[100px] -z-10"
         />
         <img
-          src="/assets/img/bg-gradient/Ellipse 43.svg"
+          src="/assets/img/bg-gradient/ellipse_43.svg"
           className="absolute bottom-0 right-0 -z-10"
         />
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-20">
@@ -60,11 +60,11 @@ const HomePageContainer = () => {
 
       <section className="relative w-full">
         <img
-          src="/assets/img/bg-gradient/Ellipse 45.svg"
+          src="/assets/img/bg-gradient/ellipse_45.svg"
           className="absolute left-0 top-0 -translate-y-1/2"
         />
         <img
-          src="/assets/img/bg-gradient/Ellipse 48.svg"
+          src="/assets/img/bg-gradient/ellipse_48.svg"
           className="absolute bottom-0 right-0 translate-y-1/2"
         />
 
@@ -133,11 +133,15 @@ const HomePageContainer = () => {
 
       <section className="relative w-full">
         <img
-          src="/assets/img/bg-gradient/Ellipse 46.svg"
+          src="/assets/img/bg-gradient/ellipse_46.svg"
           className="absolute left-0 top-0 -translate-y-1/2"
         />
         <img
+<<<<<<< HEAD
           src="/assets/img/bg-gradient/Ellipse 47.svg"
+=======
+          src="/assets/img/bg-gradient/ellipse_47.svg"
+>>>>>>> fedb7ce2d6a9c8e4b366b59ac4bdf66053721208
           className="absolute bottom-0 right-0 translate-y-1/2 -z-10"
         />
 
