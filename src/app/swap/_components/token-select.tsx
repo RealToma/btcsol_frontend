@@ -17,11 +17,11 @@ const TokenSelect: React.FC<TokenSelectProps> = ({ value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const selectedToken = tokens.find((t) => t.id === value)
-  const buttonref = useRef(null);
+  const buttonref = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event:MouseEvent) => {
     // Check if the clicked target is outside the div
-    if (buttonref.current && !buttonref.current.contains(event.target)) {
+    if (buttonref.current && !buttonref.current.contains(event.target as HTMLElement)) {
       setIsOpen(false);
     }
   };
