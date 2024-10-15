@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import Image from 'next/image'
 
 const tokens = [
@@ -17,6 +17,24 @@ const TokenSelect: React.FC<TokenSelectProps> = ({ value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const selectedToken = tokens.find((t) => t.id === value)
+  const buttonref = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event:MouseEvent) => {
+    // Check if the clicked target is outside the div
+    if (buttonref.current && !buttonref.current.contains(event.target as HTMLElement)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="relative">
@@ -42,9 +60,11 @@ const TokenSelect: React.FC<TokenSelectProps> = ({ value, onChange }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full z-[10] mt-1 w-[160px] rounded-md bg-[#191919] p-4 shadow-lg">
+        <div className="absolute right-0 top-full z-[10] mt-1 w-[160px] rounded-md bg-[#191919] p-4 shadow-lg"
+        ref={buttonref}>
           {tokens.map((token) => (
             <button
+
               key={token.id}
               className="flex w-full items-center p-2 text-left hover:bg-[#252525]"
               onClick={() => {
