@@ -27,7 +27,7 @@ export function UserWallets() {
       <PopoverTrigger asChild>
         <Button
           aria-label="Open wallet details"
-          className="px-2.5 sm:pr-3"
+          className="px-2.5 sm:pr-3 bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01]"
         >
           <span className="hidden sm:block">{wallets[0].displayName}</span>
           <RiArrowDownSLine />
