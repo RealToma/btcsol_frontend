@@ -137,11 +137,7 @@ const HomePageContainer = () => {
           className="absolute left-0 top-0 -translate-y-1/2"
         />
         <img
-<<<<<<< HEAD
-          src="/assets/img/bg-gradient/Ellipse 47.svg"
-=======
           src="/assets/img/bg-gradient/ellipse_47.svg"
->>>>>>> fedb7ce2d6a9c8e4b366b59ac4bdf66053721208
           className="absolute bottom-0 right-0 translate-y-1/2 -z-10"
         />
 
