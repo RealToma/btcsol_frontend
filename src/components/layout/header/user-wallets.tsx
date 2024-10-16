@@ -25,19 +25,19 @@ export function UserWallets() {
   return (
     <Popover open={open} onOpenChange={onOpenChange}>
       <PopoverTrigger asChild>
-        <Button
+        <button
           aria-label="Open wallet details"
-          className="px-2.5 sm:pr-3 bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01] rounded-full"
+          className="flex h-[40px] w-[196px] items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01]"
         >
           <span className="hidden sm:block">{wallets[0].displayName}</span>
           <RiArrowDownSLine />
-        </Button>
+        </button>
       </PopoverTrigger>
       <PopoverContent
         side="bottom"
         align="end"
         sideOffset={8}
-        className="w-[260px] space-y-1 overflow-hidden px-4 py-3"
+        className="w-[260px] space-y-1 overflow-hidden px-4 py-3 bg-black text-white flex flex-col items-center justify-center"
       >
         <span className="p-2">
           Connected Wallets
@@ -57,21 +57,21 @@ export function UserWallets() {
                 className="flex items-center justify-center"
                 onClick={() => disconnect(provider as Web3Wallet.Providers)}
               >
-                <RiLogoutCircleRLine className="size-4 text-state-error" />
+                <RiLogoutCircleRLine className="size-4 text-state-error" color="red" />
               </button>
             </div>
           )
         })}
 
-        <Button
-          className="w-full border-0"
+        <button
+          className="flex h-[40px] px-2 w-[196px] items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01]"
           onClick={() => onOpenConnectWallet(true)}
         >
           <RiAddLine />
-          <span className="inline-block flex-1 text-start">
-            Connect or change wallet
+          <span className="inline-block flex-1 text-start ">
+            Change wallet
           </span>
-        </Button>
+        </button>
       </PopoverContent>
     </Popover>
   )
