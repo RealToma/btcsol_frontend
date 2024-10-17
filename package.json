@@ -48,6 +48,7 @@
     "react-hook-form": "^7.53.0",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1",

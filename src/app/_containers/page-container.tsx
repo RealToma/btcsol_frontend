@@ -1,5 +1,6 @@
 'use client'
 
+import CustomSlider from './custom-slider'
 import JoinUs from './join-us'
 import Leadership from './leadership'
 import Partners from './partners'
@@ -68,7 +69,7 @@ const HomePageContainer = () => {
           className="absolute bottom-0 right-0 translate-y-1/2"
         />
 
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-20">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-20" id="about">
           <h1 className="flex flex-col gap-5 text-center text-2xl font-bold md:text-5xl">
             BTC meets SOL
             <p className="text-sm font-normal">
@@ -100,7 +101,7 @@ const HomePageContainer = () => {
               </button>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full" id="swap">
             <div className="flex max-w-xs flex-col gap-5">
               <p className="flex flex-col gap-2 text-xl font-bold md:text-4xl">
                 BTCSOL Swap
@@ -114,7 +115,7 @@ const HomePageContainer = () => {
                 </span>
               </p>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3" >
                 <button className="h-[40px] w-[170px] rounded-full bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01]">
                   BTCSOL Swap
                 </button>
@@ -127,7 +128,7 @@ const HomePageContainer = () => {
         </div>
       </section>
 
-      <section className="mx-auto flex w-full max-w-4xl flex-col items-center gap-16">
+      <section className="mx-auto flex w-full max-w-4xl flex-col items-center gap-16" id="team">
         <Leadership />
       </section>
 
@@ -146,6 +147,9 @@ const HomePageContainer = () => {
         </div>
       </section>
 
+      <section className="mx-auto  w-full max-w-4xl ">
+        <CustomSlider />  
+      </section>
       <section className="mx-auto mb-40 flex w-full max-w-4xl flex-col items-center gap-5">
         <JoinUs />
       </section>
