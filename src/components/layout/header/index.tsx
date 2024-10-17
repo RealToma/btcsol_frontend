@@ -10,28 +10,35 @@ import Link from 'next/link'
 const NAV_LINKS = [
   {
     label: 'About',
-    href: '/about',
+    href: 'about',
   },
   {
     label: 'Swap',
-    href: '/swap',
+    href: 'swap',
   },
   {
     label: 'Team',
-    href: '/team',
+    href: 'team',
   },
   {
     label: 'Partners',
-    href: '/partners',
+    href: 'partners',
   },
-  {
-    label: 'Links',
-    href: '/links',
-  },
+  // {
+  //   label: 'Links',
+  //   href: '/links',
+  // },
 ]
 
 export function Header() {
   const { isConnected } = useWallet()
+  const scrollToSection = (e:React.MouseEvent<HTMLElement>, sectionId: string) => {
+    e.preventDefault()
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const onOpenWalletConnectChange = useConnectWalletModalState(
     (s) => s.onOpenChange,
@@ -46,9 +53,9 @@ export function Header() {
         </a>
 
         {NAV_LINKS.map((item, index) => (
-          <Link href={item.href} key={index}>
+          <u onClick={(e) => scrollToSection(e,item.href)} key={index} className='no-underline cursor-pointer'>
             {item.label}
-          </Link>
+          </u>
         ))}
 
         <button className="h-[40px] w-[196px] rounded-full bg-gradient-to-r from-[#FFB72D] via-[#B96C0F] to-[#723F01]">

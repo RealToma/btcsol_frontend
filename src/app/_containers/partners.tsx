@@ -1,6 +1,6 @@
 const Partners = () => {
   return (
-    <>
+    <div id='partners' className="partners">
       <h1 className="text-center text-2xl font-bold md:text-5xl">Partners</h1>
       <div className="grid w-full grid-cols-6 justify-between gap-[56px]">
         {Array(18)
@@ -14,7 +14,7 @@ const Partners = () => {
             )
           })}
       </div>
-    </>
+    </div>
   )
 }
 export default Partners
