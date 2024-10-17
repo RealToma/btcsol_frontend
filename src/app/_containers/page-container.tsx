@@ -148,6 +148,7 @@ const HomePageContainer = () => {
       </section>
 
       <section className="mx-auto  w-full max-w-4xl ">
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8'>Optimize your trades <br /> across hundreds of DEXes <br /> on multiple networks</h1>
         <CustomSlider />  
       </section>
       <section className="mx-auto mb-40 flex w-full max-w-4xl flex-col items-center gap-5">
